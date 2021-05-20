@@ -1,5 +1,6 @@
 package com.example.polls.model;
 
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -111,5 +112,9 @@ public class User extends DateAudit {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+	
+	public Instant getCreatedAt() {
+		return Instant.now();
 	}
 }
